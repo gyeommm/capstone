@@ -1,0 +1,55 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.5'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'capstoneDesign'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'	// 유효성 검증을 위한 의존성. 스트링부트 2.3이상부터 spring-boot-starter-web에 있던 validation이 사라져서 따로 추가해야함.
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
+	compileOnly 'org.projectlombok:lombok'
+	//runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// aws s3를 사용하기 위한 의존성
+	implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+	// json 파싱을 위한 의존성
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
+	// opencv를 위한 의존성
+	//implementation files('C:/Users/dlsru/Source/opencv/build/java/opencv-470.jar')
+
+	// Iamport를 위한 의존성
+	//implementation 'com.github.iamport:iamport-rest-client-java:0.2.21'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+// Junit5부턴 아래의 코드 추가
+test {
+	useJUnitPlatform()
+}
