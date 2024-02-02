@@ -42,9 +42,6 @@ public class Reservation {
     @OneToOne(mappedBy = "reservation", fetch = FetchType.LAZY)
     private TrustScore trustScore;
 
-    @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Payment payment;
-
     /**
      * 연관관계 편의 메서드
      */
