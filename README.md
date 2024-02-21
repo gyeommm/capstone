@@ -79,3 +79,5 @@
 #### Image Storage
 * Amazon S3
 
+## 전체 작동 과정 (2023.06 기준)
+https://www.youtube.com/watch?v=NCMzPETaP0A&t=178s
