@@ -40,7 +40,7 @@
 </details>
 
 <details>
-<summary>상세 요구사항 명세 (2023.03.14 ~ 2023.03.24)summary>
+<summary>상세 요구사항 명세 (2023.03.14 ~ 2023.03.24)</summary>
   
 </details>
 
