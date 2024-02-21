@@ -4,6 +4,8 @@
 
 [전체 작동 과정 시연 영상(YouTube)](https://www.youtube.com/watch?v=NCMzPETaP0A)
 
+[ERD(ERDCloud)](https://www.erdcloud.com/d/tP5C4zXZ6ns4phWq7)
+
 ---
 ## 개발 환경
 #### Backend
